@@ -52,7 +52,7 @@ cp data/campus_customs.db data/campus_customs_new.db
 .venv/bin/python -m mcp_server.server
 ```
 
-Smoke test through the tools: `.venv/bin/python scripts/mcp_smoke.py`.
+Optional smoke test: `.venv/bin/python scripts/mcp_smoke.py` drives three tool calls through the Claude Code CLI, so it needs a logged-in `claude` CLI. It also resets the database and rewrites `output/mcp_smoke.json`, so skip it if you want to keep the resolved state and the saved evidence.
 
 ## 3. Start the FastAPI backend
 
