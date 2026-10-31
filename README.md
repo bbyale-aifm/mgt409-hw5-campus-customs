@@ -94,3 +94,28 @@ Payments and discounts wait for a human. Approve them in the board's seal dialog
 ```
 
 Every agent action is appended to `output/audit_trail.json`. See `output/harness.md` for the full design.
+
+## If port 8000 or 5173 is busy
+
+Use other ports. The backend only allows the dashboard from `http://localhost:5173` unless you add the new address:
+
+```bash
+cd backend
+EXTRA_FRONTEND_ORIGINS=http://localhost:5174 ../.venv/bin/uvicorn main:app --port 8001
+```
+
+```bash
+cd frontend
+VITE_API_URL=http://localhost:8001 npm run dev -- --port 5174
+```
+
+Then open http://localhost:5174. The CLI run (`python -m backend.run_tickets`) and the MCP server use no ports.
+
+## Fixes made after the first push
+
+- Added this `README.md` and a `.gitignore` inside the project, and stopped tracking the generated `tsconfig.tsbuildinfo`.
+- Added the five Student Explanations to the Reflection tab in `output/desk_tickets.html`, then fixed typos and tied them to the three tickets.
+- Replaced my paraphrased question text in the Reflection tab with the course page's exact wording.
+- Added the Problem 10 and Problem 11 prompts to `AI_prompts.md`.
+- Made the clean-copy and reset steps explicit here, and said what the smoke test needs and overwrites.
+- Added the alternate-port instructions above.
