@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Archives / submission bundles
+*.zip
+
+# OS
+.DS_Store
+
+# Build output and runtime files
+node_modules/
+dist/
+*.tsbuildinfo
+output/audit_trail.lock
+.claude/

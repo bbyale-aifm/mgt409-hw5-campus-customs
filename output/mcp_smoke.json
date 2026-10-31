@@ -1,0 +1,17 @@
+[
+  {
+    "prompt": "How many size S Classic Bulldog Tees (SKU CC-TEE-WHITE) do we have in stock? Use the campus-customs MCP tool.",
+    "tool_name": "check_stock",
+    "tool_output": {"found":true,"sku":"CC-TEE-WHITE","name":"Classic Bulldog Tee","size":"S","qty":0,"location":"Aisle B"}
+  },
+  {
+    "prompt": "When is rent due on lease 1 and how many days away is that? Use the campus-customs MCP tool.",
+    "tool_name": "get_lease",
+    "tool_output": {"found":true,"id":1,"space_name":"Chapel Street shop","landlord":"Elm City Properties","monthly_rent":2400,"next_due":"2026-09-02","notes":null,"today":"2026-08-31","days_until_due":2}
+  },
+  {
+    "prompt": "What is the unit cost, list price and margin for the hoodie SKU CC-HOOD-NAVY? Use the campus-customs MCP tool.",
+    "tool_name": "get_pricing",
+    "tool_output": {"found":true,"sku":"CC-HOOD-NAVY","unit_cost":22,"list_price":58,"margin_per_unit":36,"margin_pct":62.1}
+  }
+]
