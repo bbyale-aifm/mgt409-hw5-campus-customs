@@ -250,3 +250,55 @@ tickets; the first attempt stays in the audit trail marked as discarded. Resolvi
 `approve_price_proposal` / `reject_price_proposal` as human-only MCP tools with
 routes and a Seal-modal section, and made paying an invoice release the vendor's
 blocked restock proposals.
+
+## Problem 10: Reflection
+
+**Prompt (verbatim):**
+
+````text
+Problem 10: Reflection
+Help me populate the Reflection tab in output/desk_tickets.html for Problem 10. For each of the 5 questions below, put the responses into two distinct sections that are annotations (non-code): 
+#AI Explanation: 
+#Student Explanation: 
+You can fill in the AI explanation section. I will fill in the student explanation. Once I give you my explanation, fill it in under the appropriate question. 
+Ground every answer in Campus Customs operations, shop handbook rules, and actual execution data from the three tickets and the Cash tab. Avoid generic responses—every point must reference specific vendor attributes, handbook constraints (lead times, minimum order quantities, unit prices, target margins), or token/cost overhead.
+
+* 
+
+Questions to Answer:
+
+1. Performance Evaluation: Evaluate agent performance across all three tickets. Analyze extraction precision (SKU, pricing, lead time, min order), purchasing rule compliance, and robustness against prompt injection or malicious triggers (specifically checking if trap tools like send_email or approve_payment were triggered).
+2. Actual vs. Expected Plans: Compare actual agent trajectories and outputs for each ticket against our baseline operational plan. Detail where execution matched expectations and where edge cases (such as hidden vendor fees or format parsing quirks) caused deviations.
+3. Single Agent vs. Multi-Agent: Identify tasks or sub-routines that would be simpler and more cost-effective as a single unified agent with tool-calling capabilities (rather than complex multi-agent orchestration). Explain why, referencing token overhead (handbook re-indexing per call) and context handoff friction.
+4. Solvable New Problems (Existing Tools): Describe 3 new operational challenges Campus Customs could solve using the tools already built (HTML/PDF/.eml document parsers, structured Pydantic schema validation, handbook compliance checker).
+5. Unsolvable Problems (Required New Tools & Agents): Describe 3 new business problems Campus Customs might face that cannot be solved with the current toolset. For each, specify the exact new tools (e.g., database integrations, live inventory APIs, payment gateway adapters) and agent architectures required.
+````
+
+**Follow-up:** The five "#Student Explanation:" sections were written by me and
+inserted under their questions without changing my wording.
+
+## Problem 11: Submit to GitHub
+
+**Prompt (verbatim):**
+
+````text
+okay so we are almost ready to submit to GitHub, but first I want to look over the entire assignment and see if I made any errors. 
+
+Pretend you are an independent reviewer for the homework. Please review the entire assignment and ensure I completed all of the homework accurately, that I answered the questions below. 
+
+https://zlisto.github.io/mgt_409_fa26/hw5/p11.html
+````
+
+**Follow-up prompt (verbatim):**
+
+````text
+Well, we need to first create homework #5 folder. Ensure the file layout follows this exactly. 
+
+Include the database files under data/ - both the original and the working copy.
+
+[Screenshot of the Problem 11 page: the expected hw5/ file layout (AI_prompts.md, requirements.txt, .env.example, .gitignore, .mcp.json, README.md, data/ with campus_customs.db and campus_customs_new.db, mcp_server/ with server.py and README.md, frontend/, backend/ with main.py, models.py and prompts/ holding boss.md, inventory.md, accounting.md, facilities.md, customer_service.md, and output/ with harness.md, mcp_smoke.json, desk_tickets.html, design.md, resolved_tickets.json, resolved_board.html, audit_trail.json, github_url.txt), followed by: "README should explain: copy original DB to the working copy when you need a clean run, start MCP server, start FastAPI backend, start the React board, reset the DB before a full three-ticket run."]
+````
+
+**Follow-up:** The assignment's page defines Problem 11; I asked for a review
+against it, then for the `hw5/` folder to match its layout, then for the commit
+and push to a public GitHub repository.
