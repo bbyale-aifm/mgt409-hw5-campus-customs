@@ -38,6 +38,12 @@ The working copy is made from the original. This also clears all agent actions (
 
 It should print `today=2026-08-31, checking=$3,400.00`.
 
+The same thing by hand, with the MCP server and backend stopped (the original is only ever read):
+
+```bash
+cp data/campus_customs.db data/campus_customs_new.db
+```
+
 ## 2. Start the MCP server
 
 `.mcp.json` registers it for Claude Code. To run it directly:
@@ -68,7 +74,13 @@ Open http://localhost:5173. The dashboard reads the API at `VITE_API_URL` (defau
 
 ## 5. Run all three tickets
 
-Reset first (step 1), then either click Run on each ticket in the board or use the CLI:
+Reset the database first so the run starts from the original data:
+
+```bash
+.venv/bin/python scripts/reset_db.py
+```
+
+Then either click Run on each ticket in the board or use the CLI:
 
 ```bash
 .venv/bin/python -m backend.run_tickets
