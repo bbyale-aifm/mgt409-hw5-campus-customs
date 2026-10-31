@@ -277,6 +277,11 @@ Questions to Answer:
 **Follow-up:** The five "#Student Explanation:" sections were written by me and
 inserted under their questions without changing my wording.
 
+**Clarification:** The prompt above was sent as written. Its Question 3 asks to
+identify "tasks or sub-routines", but the course page for Problem 10 words it
+more simply: "What would have been simpler as one agent with tools — and why?"
+The Reflection tab now shows the course page's wording for all five questions.
+
 ## Problem 11: Submit to GitHub
 
 **Prompt (verbatim):**
